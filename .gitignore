@@ -1,21 +1,11 @@
 # Things not controlled by git.
 
-#cocos2d/
-
-#proj.android/
-
-#proj.ios_mac/
-
-#proj.linux/
-
-#proj.win32/
-
-#proj.win8.1-universal/
-
-#proj.wp8-xaml/
-
-#CMakeLists.txt
-
 .DS_Store
 
 bin
+
+cocos2d/build/cocos2d_libs.xcodeproj/xcuserdata
+
+proj.ios_mac/g1.xcodeproj/project.xcworkspace/xcuserdata
+
+proj.ios_mac/g1.xcodeproj/xcuserdata
