@@ -14,6 +14,7 @@
 		2243714E1AE9231900D71FE7 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224371491AE9231900D71FE7 /* Common.cpp */; };
 		2243714F1AE9231900D71FE7 /* HomeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2243714C1AE9231900D71FE7 /* HomeLayer.cpp */; };
 		224371521AE929A100D71FE7 /* Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224371501AE929A100D71FE7 /* Helper.cpp */; };
+		224371551AE944B900D71FE7 /* TestsLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224371531AE944B900D71FE7 /* TestsLayer.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -115,6 +116,8 @@
 		2243714D1AE9231900D71FE7 /* HomeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
 		224371501AE929A100D71FE7 /* Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Helper.cpp; sourceTree = "<group>"; };
 		224371511AE929A100D71FE7 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		224371531AE944B900D71FE7 /* TestsLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestsLayer.cpp; sourceTree = "<group>"; };
+		224371541AE944B900D71FE7 /* TestsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsLayer.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 			children = (
 				2243714C1AE9231900D71FE7 /* HomeLayer.cpp */,
 				2243714D1AE9231900D71FE7 /* HomeLayer.h */,
+				224371531AE944B900D71FE7 /* TestsLayer.cpp */,
+				224371541AE944B900D71FE7 /* TestsLayer.h */,
 			);
 			path = layers;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				2243714F1AE9231900D71FE7 /* HomeLayer.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				224371551AE944B900D71FE7 /* TestsLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

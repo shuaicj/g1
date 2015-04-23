@@ -13,6 +13,8 @@ public:
     virtual ~HomeLayer();
     static HomeLayer* create();
     virtual bool init();
+
+    void onTest(cc::Ref* sender);
 };
 
 NAMESPACE_G1_END

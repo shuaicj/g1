@@ -4,16 +4,18 @@
 
 NAMESPACE_G1_BEGIN
 
-void RunWithLayer(cc::Layer* layer) {
-    auto scene = cc::Scene::create();
+using namespace cc;
+
+void RunWithLayer(Layer* layer) {
+    auto scene = Scene::create();
     scene->addChild(layer);
-    cc::Director::getInstance()->runWithScene(scene);
+    Director::getInstance()->runWithScene(scene);
 }
 
-void ReplaceLayer(cc::Layer* layer) {
-    auto scene = cc::Scene::create();
+void ReplaceLayer(Layer* layer) {
+    auto scene = Scene::create();
     scene->addChild(layer);
-    cc::Director::getInstance()->replaceScene(scene);
+    Director::getInstance()->replaceScene(scene);
 }
 
 NAMESPACE_G1_END
