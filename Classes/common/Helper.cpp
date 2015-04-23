@@ -2,7 +2,7 @@
 #include "Common.h"
 #include "cocos2d.h"
 
-NAMESPACE_GG_BEGIN
+NAMESPACE_G1_BEGIN
 
 void RunWithLayer(cc::Layer* layer) {
     auto scene = cc::Scene::create();
@@ -16,6 +16,6 @@ void ReplaceLayer(cc::Layer* layer) {
     cc::Director::getInstance()->replaceScene(scene);
 }
 
-NAMESPACE_GG_END
+NAMESPACE_G1_END
 
 

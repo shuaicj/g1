@@ -1,11 +1,12 @@
-#ifndef _GG_HOME_LAYER_H_
-#define _GG_HOME_LAYER_H_
+#ifndef _G1_HOME_LAYER_H_
+#define _G1_HOME_LAYER_H_
 
 #include "Common.h"
 #include "cocos2d.h"
 
-NAMESPACE_GG_BEGIN
+NAMESPACE_G1_BEGIN
 
+// This is the first UI you'll see when entering the game.
 class HomeLayer : public cc::Layer {
 public:
     HomeLayer();
@@ -14,6 +15,6 @@ public:
     virtual bool init();
 };
 
-NAMESPACE_GG_END
+NAMESPACE_G1_END
 
-#endif // _GG_HOME_LAYER_H_
+#endif // _G1_HOME_LAYER_H_

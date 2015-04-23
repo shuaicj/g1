@@ -1,16 +1,16 @@
-#ifndef _GG_HELPER_H_
-#define _GG_HELPER_H_
+#ifndef _G1_HELPER_H_
+#define _G1_HELPER_H_
 
 #include "Common.h"
 
-NAMESPACE_GG_BEGIN
+NAMESPACE_G1_BEGIN
 
-// 用layer调用Director的runWithScene
+// use a layer to call Director::runWithScene
 void RunWithLayer(cc::Layer* layer);
 
-// 用layer调用Director的replaceScene
+// use a layer to call Director::replaceScene
 void ReplaceLayer(cc::Layer* layer);
 
-NAMESPACE_GG_END
+NAMESPACE_G1_END
 
-#endif // _GG_HELPER_H_
+#endif // _G1_HELPER_H_

@@ -1,6 +1,6 @@
 #include "HomeLayer.h"
 
-NAMESPACE_GG_BEGIN
+NAMESPACE_G1_BEGIN
 
 HomeLayer::HomeLayer() {
 }
@@ -28,5 +28,5 @@ bool HomeLayer::init() {
     return true;
 }
 
-NAMESPACE_GG_END
+NAMESPACE_G1_END
 

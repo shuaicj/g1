@@ -1,11 +1,11 @@
-#ifndef _GG_COMMON_H_
-#define _GG_COMMON_H_
+#ifndef _G1_COMMON_H_
+#define _G1_COMMON_H_
 
-// 重命名cocos2d
+// rename namespace cocos2d to cc
 namespace cc = cocos2d;
 
-// 项目命名空间
-#define NAMESPACE_GG_BEGIN namespace g1 {
-#define NAMESPACE_GG_END }
+// project namespace
+#define NAMESPACE_G1_BEGIN namespace g1 {
+#define NAMESPACE_G1_END }
 
-#endif // _GG_COMMON_H_
+#endif // _G1_COMMON_H_
