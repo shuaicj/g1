@@ -1,5 +1,6 @@
 #include "TestsLayer.h"
 #include "Helper.h"
+#include "Resolution.h"
 #include "HomeLayer.h"
 
 NAMESPACE_G1_BEGIN
@@ -31,9 +32,9 @@ bool TestsLayer::init() {
 
     // back to HomeLayer
     auto backButton = MenuItemFont::create("BACK", CC_CALLBACK_1(TestsLayer::onBack, this));
-    backButton->setPosition(Vec2(WIDTH/2, 200));
+    backButton->setPosition(Resolution::xy(WIDTH/2, 200));
     auto backMenu = Menu::create(backButton, nullptr);
-    backMenu->setPosition(Vec2(0, 0));
+    backMenu->setPosition(Resolution::xy(0, 0));
     this->addChild(backMenu);
     
     return true;

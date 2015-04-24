@@ -1,5 +1,6 @@
 #include "HomeLayer.h"
 #include "Helper.h"
+#include "Resolution.h"
 #include "TestsLayer.h"
 
 NAMESPACE_G1_BEGIN
@@ -31,9 +32,9 @@ bool HomeLayer::init() {
 
     // show test
     auto testButton = MenuItemFont::create("TESTS", CC_CALLBACK_1(HomeLayer::onTest, this));
-    testButton->setPosition(Vec2(WIDTH/2, HEIGHT/2));
+    testButton->setPosition(Resolution::xy(WIDTH/2, HEIGHT/2));
     auto testMenu = Menu::create(testButton, nullptr);
-    testMenu->setPosition(Vec2(0, 0));
+    testMenu->setPosition(Resolution::xy(0, 0));
     this->addChild(testMenu);
     
     return true;

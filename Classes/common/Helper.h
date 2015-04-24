@@ -2,6 +2,7 @@
 #define _G1_HELPER_H_
 
 #include "Common.h"
+#include "cocos2d.h"
 
 NAMESPACE_G1_BEGIN
 
