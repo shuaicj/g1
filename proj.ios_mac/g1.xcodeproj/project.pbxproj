@@ -16,6 +16,7 @@
 		224371521AE929A100D71FE7 /* Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224371501AE929A100D71FE7 /* Helper.cpp */; };
 		224B60661AEA89C90093AAE3 /* TestsLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224B60641AEA89C90093AAE3 /* TestsLayer.cpp */; };
 		224B60691AEA92420093AAE3 /* Resolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224B60671AEA92420093AAE3 /* Resolution.cpp */; };
+		224B606C1AEA94E90093AAE3 /* TestShapeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224B606A1AEA94E90093AAE3 /* TestShapeLayer.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -121,6 +122,8 @@
 		224B60651AEA89C90093AAE3 /* TestsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsLayer.h; sourceTree = "<group>"; };
 		224B60671AEA92420093AAE3 /* Resolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resolution.cpp; sourceTree = "<group>"; };
 		224B60681AEA92420093AAE3 /* Resolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resolution.h; sourceTree = "<group>"; };
+		224B606A1AEA94E90093AAE3 /* TestShapeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestShapeLayer.cpp; sourceTree = "<group>"; };
+		224B606B1AEA94E90093AAE3 /* TestShapeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestShapeLayer.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 		224B60631AEA89C90093AAE3 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				224B606A1AEA94E90093AAE3 /* TestShapeLayer.cpp */,
+				224B606B1AEA94E90093AAE3 /* TestShapeLayer.h */,
 				224B60641AEA89C90093AAE3 /* TestsLayer.cpp */,
 				224B60651AEA89C90093AAE3 /* TestsLayer.h */,
 			);
@@ -541,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				224B606C1AEA94E90093AAE3 /* TestShapeLayer.cpp in Sources */,
 				224B60691AEA92420093AAE3 /* Resolution.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				2243714E1AE9231900D71FE7 /* Common.cpp in Sources */,

@@ -15,6 +15,7 @@ public:
     virtual bool init();
 
     void onBack(cc::Ref* sender);
+    void onTestShape(cc::Ref* sender);
 };
 
 NAMESPACE_G1_END

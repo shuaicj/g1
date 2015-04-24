@@ -14,7 +14,7 @@ HomeLayer::~HomeLayer() {
 }
 
 HomeLayer* HomeLayer::create() {
-    HomeLayer* layer = new HomeLayer();
+    auto layer = new HomeLayer();
     if (layer && layer->init()) {
         layer->autorelease();
         return layer;

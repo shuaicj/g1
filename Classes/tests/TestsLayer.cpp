@@ -2,6 +2,7 @@
 #include "Helper.h"
 #include "Resolution.h"
 #include "HomeLayer.h"
+#include "TestShapeLayer.h"
 
 NAMESPACE_G1_BEGIN
 
@@ -14,7 +15,7 @@ TestsLayer::~TestsLayer() {
 }
 
 TestsLayer* TestsLayer::create() {
-    TestsLayer* layer = new TestsLayer();
+    auto layer = new TestsLayer();
     if (layer && layer->init()) {
         layer->autorelease();
         return layer;
@@ -37,11 +38,22 @@ bool TestsLayer::init() {
     backMenu->setPosition(Resolution::xy(0, 0));
     this->addChild(backMenu);
     
+    // test Shape
+    auto shapeButton = MenuItemFont::create("Shape", CC_CALLBACK_1(TestsLayer::onTestShape, this));
+    shapeButton->setPosition(Resolution::xy(WIDTH/2, 1000));
+    auto shapeMenu = Menu::create(shapeButton, nullptr);
+    shapeMenu->setPosition(Resolution::xy(0, 0));
+    this->addChild(shapeMenu);
+
     return true;
 }
 
 void TestsLayer::onBack(Ref* sender) {
     ReplaceLayer(HomeLayer::create());
+}
+
+void TestsLayer::onTestShape(Ref* sender) {
+    ReplaceLayer(TestShapeLayer::create());
 }
 
 NAMESPACE_G1_END
