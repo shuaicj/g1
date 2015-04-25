@@ -31,10 +31,10 @@ bool HomeLayer::init() {
     }
 
     // show test
-    auto testButton = MenuItemFont::create("TESTS", CC_CALLBACK_1(HomeLayer::onTest, this));
-    testButton->setPosition(Resolution::xy(WIDTH/2, HEIGHT/2));
+    auto testButton = MenuItemFont::create("TESTS", HANDLER(HomeLayer::onTest));
+    Resolution::adapt(testButton, WIDTH/2, HEIGHT/2);
     auto testMenu = Menu::create(testButton, nullptr);
-    testMenu->setPosition(Resolution::xy(0, 0));
+    testMenu->setPosition(0, 0);
     this->addChild(testMenu);
     
     return true;

@@ -31,10 +31,10 @@ bool TestShapeLayer::init() {
     }
 
     // back to HomeLayer
-    auto backButton = MenuItemFont::create("BACK", CC_CALLBACK_1(TestShapeLayer::onBack, this));
-    backButton->setPosition(Resolution::xy(WIDTH/2, 200));
+    auto backButton = MenuItemFont::create("BACK", HANDLER(TestShapeLayer::onBack));
+    Resolution::adapt(backButton, WIDTH/2, 200);
     auto backMenu = Menu::create(backButton, nullptr);
-    backMenu->setPosition(Resolution::xy(0, 0));
+    backMenu->setPosition(0, 0);
     this->addChild(backMenu);
     
     return true;

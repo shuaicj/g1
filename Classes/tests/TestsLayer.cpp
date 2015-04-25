@@ -32,17 +32,17 @@ bool TestsLayer::init() {
     }
 
     // back to HomeLayer
-    auto backButton = MenuItemFont::create("BACK", CC_CALLBACK_1(TestsLayer::onBack, this));
-    backButton->setPosition(Resolution::xy(WIDTH/2, 200));
+    auto backButton = MenuItemFont::create("BACK", HANDLER(TestsLayer::onBack));
+    Resolution::adapt(backButton, WIDTH/2, 200);
     auto backMenu = Menu::create(backButton, nullptr);
-    backMenu->setPosition(Resolution::xy(0, 0));
+    backMenu->setPosition(0, 0);
     this->addChild(backMenu);
     
     // test Shape
-    auto shapeButton = MenuItemFont::create("Shape", CC_CALLBACK_1(TestsLayer::onTestShape, this));
-    shapeButton->setPosition(Resolution::xy(WIDTH/2, 1000));
+    auto shapeButton = MenuItemFont::create("Shape", HANDLER(TestsLayer::onTestShape));
+    Resolution::adapt(shapeButton, WIDTH/2, 1000);
     auto shapeMenu = Menu::create(shapeButton, nullptr);
-    shapeMenu->setPosition(Resolution::xy(0, 0));
+    shapeMenu->setPosition(0, 0);
     this->addChild(shapeMenu);
 
     return true;

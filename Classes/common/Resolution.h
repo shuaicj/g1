@@ -5,6 +5,10 @@
 
 NAMESPACE_G1_BEGIN
 
+// design resolution
+#define WIDTH  750
+#define HEIGHT 1334
+
 // resolution adapt
 class Resolution {
 public:
@@ -19,6 +23,15 @@ public:
 
     // adapt Vec2
     static cc::Vec2 xy(const cc::Vec2& v);
+
+    // adapt distance
+    static float distance(float distance);
+
+    // adapt Node
+    static void adapt(cc::Node* node, float x, float y);
+
+    // adapt background
+    static void adaptBackground(cc::Node* node);
 };
 
 NAMESPACE_G1_END
