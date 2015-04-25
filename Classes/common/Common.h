@@ -5,8 +5,15 @@
 #define WIDTH  750
 #define HEIGHT 1334
 
-// tetris size
-#define TETRIS_SIZE 4
+// tetris num: seven shapes I,O,J,L,S,Z,T
+#define TETRIS_NUM 7
+
+// tetris matrix size
+#define TETRIS_SIZE  4
+
+// board width and height
+#define BOARD_WIDTH  10
+#define BOARD_HEIGHT 20
 
 // rename namespace cocos2d to cc
 namespace cc = cocos2d;

@@ -43,9 +43,14 @@ float Resolution::distance(float distance) {
     return distance * minScale;
 }
 
-void Resolution::adapt(Node* node, float x, float y) {
+void Resolution::adapt(Node* node) {
     lazyInit();
     node->setScale(node->getScale() * minScale);
+}
+
+void Resolution::adapt(Node* node, float x, float y) {
+    lazyInit();
+    Resolution::adapt(node);
     node->setPosition(Resolution::xy(x, y));
 }
 

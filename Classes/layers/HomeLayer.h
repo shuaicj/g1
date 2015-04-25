@@ -14,7 +14,11 @@ public:
     static HomeLayer* create();
     virtual bool init();
 
+    void onStart(cc::Ref* sender);
     void onTest(cc::Ref* sender);
+
+private:
+    CC_DISALLOW_COPY_AND_ASSIGN(HomeLayer);
 };
 
 NAMESPACE_G1_END

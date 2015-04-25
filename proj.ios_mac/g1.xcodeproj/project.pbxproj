@@ -11,6 +11,7 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2241C3F91AEBD4EE0027AAFB /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2241C3F71AEBD4EE0027AAFB /* GameLayer.cpp */; };
 		2243714E1AE9231900D71FE7 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224371491AE9231900D71FE7 /* Common.cpp */; };
 		2243714F1AE9231900D71FE7 /* HomeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2243714C1AE9231900D71FE7 /* HomeLayer.cpp */; };
 		224371521AE929A100D71FE7 /* Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224371501AE929A100D71FE7 /* Helper.cpp */; };
@@ -114,6 +115,8 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* g1 iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "g1 iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2241C3F71AEBD4EE0027AAFB /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLayer.cpp; sourceTree = "<group>"; };
+		2241C3F81AEBD4EE0027AAFB /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
 		224371491AE9231900D71FE7 /* Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Common.cpp; sourceTree = "<group>"; };
 		2243714A1AE9231900D71FE7 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		2243714C1AE9231900D71FE7 /* HomeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeLayer.cpp; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 		2243714B1AE9231900D71FE7 /* layers */ = {
 			isa = PBXGroup;
 			children = (
+				2241C3F71AEBD4EE0027AAFB /* GameLayer.cpp */,
+				2241C3F81AEBD4EE0027AAFB /* GameLayer.h */,
 				2243714C1AE9231900D71FE7 /* HomeLayer.cpp */,
 				2243714D1AE9231900D71FE7 /* HomeLayer.h */,
 			);
@@ -568,6 +573,7 @@
 				224B60691AEA92420093AAE3 /* Resolution.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				2243714E1AE9231900D71FE7 /* Common.cpp in Sources */,
+				2241C3F91AEBD4EE0027AAFB /* GameLayer.cpp in Sources */,
 				224371521AE929A100D71FE7 /* Helper.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				2243714F1AE9231900D71FE7 /* HomeLayer.cpp in Sources */,

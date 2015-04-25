@@ -1,6 +1,7 @@
 #include "HomeLayer.h"
 #include "Helper.h"
 #include "Resolution.h"
+#include "GameLayer.h"
 #include "TestsLayer.h"
 
 NAMESPACE_G1_BEGIN
@@ -30,14 +31,25 @@ bool HomeLayer::init() {
         return false;
     }
 
-    // show test
+    // start button
+    auto startButton = MenuItemFont::create("Start", HANDLER(HomeLayer::onStart));
+    Resolution::adapt(startButton, WIDTH/2, HEIGHT/2);
+    auto startMenu = Menu::create(startButton, nullptr);
+    startMenu->setPosition(0, 0);
+    this->addChild(startMenu);
+
+    // test button
     auto testButton = MenuItemFont::create("TESTS", HANDLER(HomeLayer::onTest));
-    Resolution::adapt(testButton, WIDTH/2, HEIGHT/2);
+    Resolution::adapt(testButton, WIDTH/2, 30);
     auto testMenu = Menu::create(testButton, nullptr);
     testMenu->setPosition(0, 0);
     this->addChild(testMenu);
-    
+
     return true;
+}
+
+void HomeLayer::onStart(Ref* sender) {
+    ReplaceLayer(GameLayer::create());
 }
 
 void HomeLayer::onTest(Ref* sender) {

@@ -7,10 +7,24 @@
 
 NAMESPACE_G1_BEGIN
 
+class Shape;
+class Form;
+
+// A Tetris is a Shape with states.
 class Tetris {
 public:
-    static const Tetris I;
-}
+    Tetris(const Shape& shape);
+    virtual ~Tetris() {}
+
+    // move to next form
+    const Form* transform();
+
+private:
+    const Shape& _shape;
+    int _index; // form index
+
+    CC_DISALLOW_COPY_AND_ASSIGN(Tetris);
+};
 
 NAMESPACE_G1_END
 

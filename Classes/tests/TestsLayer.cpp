@@ -33,7 +33,7 @@ bool TestsLayer::init() {
 
     // back to HomeLayer
     auto backButton = MenuItemFont::create("BACK", HANDLER(TestsLayer::onBack));
-    Resolution::adapt(backButton, WIDTH/2, 200);
+    Resolution::adapt(backButton, WIDTH/2, 30);
     auto backMenu = Menu::create(backButton, nullptr);
     backMenu->setPosition(0, 0);
     this->addChild(backMenu);

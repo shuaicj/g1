@@ -16,6 +16,9 @@ public:
 
     void onBack(cc::Ref* sender);
     void onTestShape(cc::Ref* sender);
+
+private:
+    CC_DISALLOW_COPY_AND_ASSIGN(TestsLayer);
 };
 
 NAMESPACE_G1_END

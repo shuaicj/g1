@@ -24,6 +24,7 @@ public:
     static float distance(float distance);
 
     // adapt Node
+    static void adapt(cc::Node* node);
     static void adapt(cc::Node* node, float x, float y);
 
     // adapt background
