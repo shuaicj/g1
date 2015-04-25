@@ -17,6 +17,8 @@
 		224B60661AEA89C90093AAE3 /* TestsLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224B60641AEA89C90093AAE3 /* TestsLayer.cpp */; };
 		224B60691AEA92420093AAE3 /* Resolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224B60671AEA92420093AAE3 /* Resolution.cpp */; };
 		224B606C1AEA94E90093AAE3 /* TestShapeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224B606A1AEA94E90093AAE3 /* TestShapeLayer.cpp */; };
+		2255A4481AEB34F4005CF1CB /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2255A4441AEB34F4005CF1CB /* Shape.cpp */; };
+		2255A4491AEB34F4005CF1CB /* Tetris.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2255A4461AEB34F4005CF1CB /* Tetris.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -124,6 +126,10 @@
 		224B60681AEA92420093AAE3 /* Resolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resolution.h; sourceTree = "<group>"; };
 		224B606A1AEA94E90093AAE3 /* TestShapeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestShapeLayer.cpp; sourceTree = "<group>"; };
 		224B606B1AEA94E90093AAE3 /* TestShapeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestShapeLayer.h; sourceTree = "<group>"; };
+		2255A4441AEB34F4005CF1CB /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
+		2255A4451AEB34F4005CF1CB /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		2255A4461AEB34F4005CF1CB /* Tetris.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tetris.cpp; sourceTree = "<group>"; };
+		2255A4471AEB34F4005CF1CB /* Tetris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tetris.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
@@ -286,6 +292,17 @@
 			path = tests;
 			sourceTree = "<group>";
 		};
+		2255A4431AEB34F4005CF1CB /* game */ = {
+			isa = PBXGroup;
+			children = (
+				2255A4441AEB34F4005CF1CB /* Shape.cpp */,
+				2255A4451AEB34F4005CF1CB /* Shape.h */,
+				2255A4461AEB34F4005CF1CB /* Tetris.cpp */,
+				2255A4471AEB34F4005CF1CB /* Tetris.h */,
+			);
+			path = game;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +360,7 @@
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				224371481AE9231900D71FE7 /* common */,
+				2255A4431AEB34F4005CF1CB /* game */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
 				2243714B1AE9231900D71FE7 /* layers */,
@@ -556,6 +574,8 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				224B60661AEA89C90093AAE3 /* TestsLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				2255A4481AEB34F4005CF1CB /* Shape.cpp in Sources */,
+				2255A4491AEB34F4005CF1CB /* Tetris.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

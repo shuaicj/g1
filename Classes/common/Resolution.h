@@ -5,10 +5,6 @@
 
 NAMESPACE_G1_BEGIN
 
-// design resolution
-#define WIDTH  750
-#define HEIGHT 1334
-
 // resolution adapt
 class Resolution {
 public:

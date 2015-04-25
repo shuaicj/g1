@@ -4,13 +4,13 @@ NAMESPACE_G1_BEGIN
 
 using namespace cc;
 
-static float minScale = 0.f;
-static float maxScale = 0.f;
-static float minX = 0.f;
-static float minY = 0.f;
+static float minScale = 0.0f;
+static float maxScale = 0.0f;
+static float minX = 0.0f;
+static float minY = 0.0f;
 
 static void lazyInit() {
-    if (minScale == 0.f) {
+    if (minScale == 0.0f) {
         auto size = Director::getInstance()->getOpenGLView()->getFrameSize();
         auto scaleX = size.width / WIDTH;
         auto scaleY = size.height / HEIGHT;

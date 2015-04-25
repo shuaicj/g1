@@ -2,6 +2,7 @@
 #include "Helper.h"
 #include "Resolution.h"
 #include "TestsLayer.h"
+#include "Shape.h"
 
 NAMESPACE_G1_BEGIN
 
@@ -36,6 +37,15 @@ bool TestShapeLayer::init() {
     auto backMenu = Menu::create(backButton, nullptr);
     backMenu->setPosition(0, 0);
     this->addChild(backMenu);
+
+    Grid s = { 1, 2 };
+    CCLOG("Grid x:%d y:%d", s.x, s.y);
+
+
+    Shape ss = {
+        { 1, 2 },
+        { 3, 4 },
+    };
     
     return true;
 }

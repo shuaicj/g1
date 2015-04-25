@@ -1,6 +1,13 @@
 #ifndef _G1_COMMON_H_
 #define _G1_COMMON_H_
 
+// design resolution
+#define WIDTH  750
+#define HEIGHT 1334
+
+// tetris size
+#define TETRIS_SIZE 4
+
 // rename namespace cocos2d to cc
 namespace cc = cocos2d;
 
