@@ -20,6 +20,8 @@
 		224B606C1AEA94E90093AAE3 /* TestShapeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 224B606A1AEA94E90093AAE3 /* TestShapeLayer.cpp */; };
 		2255A4481AEB34F4005CF1CB /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2255A4441AEB34F4005CF1CB /* Shape.cpp */; };
 		2255A4491AEB34F4005CF1CB /* Tetris.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2255A4461AEB34F4005CF1CB /* Tetris.cpp */; };
+		2262B97E1AEC8EA50008A9A6 /* Form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2262B97C1AEC8EA50008A9A6 /* Form.cpp */; };
+		2262B9811AEC947D0008A9A6 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2262B97F1AEC947D0008A9A6 /* Board.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -133,6 +135,10 @@
 		2255A4451AEB34F4005CF1CB /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
 		2255A4461AEB34F4005CF1CB /* Tetris.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tetris.cpp; sourceTree = "<group>"; };
 		2255A4471AEB34F4005CF1CB /* Tetris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tetris.h; sourceTree = "<group>"; };
+		2262B97C1AEC8EA50008A9A6 /* Form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Form.cpp; sourceTree = "<group>"; };
+		2262B97D1AEC8EA50008A9A6 /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
+		2262B97F1AEC947D0008A9A6 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		2262B9801AEC947D0008A9A6 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
@@ -300,6 +306,10 @@
 		2255A4431AEB34F4005CF1CB /* game */ = {
 			isa = PBXGroup;
 			children = (
+				2262B97F1AEC947D0008A9A6 /* Board.cpp */,
+				2262B9801AEC947D0008A9A6 /* Board.h */,
+				2262B97C1AEC8EA50008A9A6 /* Form.cpp */,
+				2262B97D1AEC8EA50008A9A6 /* Form.h */,
 				2255A4441AEB34F4005CF1CB /* Shape.cpp */,
 				2255A4451AEB34F4005CF1CB /* Shape.h */,
 				2255A4461AEB34F4005CF1CB /* Tetris.cpp */,
@@ -570,6 +580,7 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				224B606C1AEA94E90093AAE3 /* TestShapeLayer.cpp in Sources */,
+				2262B9811AEC947D0008A9A6 /* Board.cpp in Sources */,
 				224B60691AEA92420093AAE3 /* Resolution.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				2243714E1AE9231900D71FE7 /* Common.cpp in Sources */,
@@ -577,6 +588,7 @@
 				224371521AE929A100D71FE7 /* Helper.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				2243714F1AE9231900D71FE7 /* HomeLayer.cpp in Sources */,
+				2262B97E1AEC8EA50008A9A6 /* Form.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				224B60661AEA89C90093AAE3 /* TestsLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,

@@ -14,6 +14,12 @@ public:
     static GameLayer* create();
     virtual bool init();
 
+    void onLeft(cc::Ref* sender);
+    void onRight(cc::Ref* sender);
+    void onSlowDown(cc::Ref* sender);
+    void onFastDown(cc::Ref* sender);
+    void onRotate(cc::Ref* sender);
+
     void onBack(cc::Ref* sender);
 
 private:

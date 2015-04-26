@@ -35,7 +35,7 @@ Vec2 Resolution::xy(float x, float y) {
     return Vec2(Resolution::x(x), Resolution::y(y));
 }
 
-Vec2 Resolution::xy(const cc::Vec2& v) {
+Vec2 Resolution::xy(const Vec2& v) {
     return Resolution::xy(v.x, v.y);
 }
 

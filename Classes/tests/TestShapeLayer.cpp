@@ -3,6 +3,7 @@
 #include "Resolution.h"
 #include "TestsLayer.h"
 #include "Shape.h"
+#include "Form.h"
 #include "Tetris.h"
 
 NAMESPACE_G1_BEGIN
@@ -105,13 +106,24 @@ void TestShapeLayer::showNextTetris(int index) {
         }
     }
     // add new
+    //auto form = _tetrises[index]->transform();
+    //auto points = form->points();
+    //for (auto p : points) {
+    //    _fgGrids[index][p.x][p.y] = LayerColor::create(Color4B(200, 0, 0, 255), 35, 35);
+    //    _fgGrids[index][p.x][p.y]->setPosition(_bgGrids[index][p.x][p.y]->getPosition());
+    //    Resolution::adapt(_fgGrids[index][p.x][p.y]);
+    //    this->addChild(_fgGrids[index][p.x][p.y]);
+    //}
     auto form = _tetrises[index]->transform();
-    auto points = form->points();
-    for (auto p : points) {
-        _fgGrids[index][p.x][p.y] = LayerColor::create(Color4B(200, 0, 0, 255), 35, 35);
-        _fgGrids[index][p.x][p.y]->setPosition(_bgGrids[index][p.x][p.y]->getPosition());
-        Resolution::adapt(_fgGrids[index][p.x][p.y]);
-        this->addChild(_fgGrids[index][p.x][p.y]);
+    for (int x = 0; x < TETRIS_SIZE; ++x) {
+        for (int y = 0; y < TETRIS_SIZE; ++y) {
+            if (form->exists(x, y)) {
+                _fgGrids[index][x][y] = LayerColor::create(Color4B(200, 0, 0, 255), 35, 35);
+                _fgGrids[index][x][y]->setPosition(_bgGrids[index][x][y]->getPosition());
+                Resolution::adapt(_fgGrids[index][x][y]);
+                this->addChild(_fgGrids[index][x][y]);
+            }
+        }
     }
     // set label
     char buffer[128] = {0};
