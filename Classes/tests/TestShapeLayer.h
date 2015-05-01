@@ -14,8 +14,9 @@ public:
     TestShapeLayer();
     virtual ~TestShapeLayer();
     static TestShapeLayer* create();
-    virtual bool init();
+    virtual bool init() override;
 
+private:
     void showNextTetris(int index);
 
     void onNext(cc::Ref* sender);

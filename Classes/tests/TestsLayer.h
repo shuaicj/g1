@@ -12,8 +12,9 @@ public:
     TestsLayer();
     virtual ~TestsLayer();
     static TestsLayer* create();
-    virtual bool init();
+    virtual bool init() override;
 
+private:
     void onBack(cc::Ref* sender);
     void onTestShape(cc::Ref* sender);
 

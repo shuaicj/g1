@@ -11,6 +11,9 @@ public:
     Board();
     virtual ~Board() {}
 
+    bool exists(int x, int y) const { return _matrix[x][y]; }
+    void set(int x, int y, bool b) { _matrix[x][y] = b; }
+
 private:
     bool _matrix[BOARD_WIDTH][BOARD_HEIGHT];
 

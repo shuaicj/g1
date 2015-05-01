@@ -32,14 +32,14 @@ bool HomeLayer::init() {
     }
 
     // start button
-    auto startButton = MenuItemFont::create("Start", HANDLER(HomeLayer::onStart));
+    auto startButton = MenuItemFont::create("Start", HANDLER1(HomeLayer::onStart));
     Resolution::adapt(startButton, WIDTH/2, HEIGHT/2);
     auto startMenu = Menu::create(startButton, nullptr);
     startMenu->setPosition(0, 0);
     this->addChild(startMenu);
 
     // test button
-    auto testButton = MenuItemFont::create("TESTS", HANDLER(HomeLayer::onTest));
+    auto testButton = MenuItemFont::create("TESTS", HANDLER1(HomeLayer::onTest));
     Resolution::adapt(testButton, WIDTH/2, 30);
     auto testMenu = Menu::create(testButton, nullptr);
     testMenu->setPosition(0, 0);

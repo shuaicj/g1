@@ -17,7 +17,7 @@ public:
     Shape(std::initializer_list<const Form*> forms) : _forms(forms) {}
     virtual ~Shape() {}
 
-    inline const std::vector<const Form*>& forms() const { return _forms; }
+    const std::vector<const Form*>& forms() const { return _forms; }
 
     static const Shape I;
     static const Shape O;
@@ -26,6 +26,7 @@ public:
     static const Shape S;
     static const Shape Z;
     static const Shape T;
+    static const std::vector<const Shape*> ALL;
 
 private:
     std::vector<const Form*> _forms;

@@ -8,22 +8,17 @@
 
 NAMESPACE_G1_BEGIN
 
-struct Coordinate {
-    int x;
-    int y;
-};
-
 // Each Shape has several Form. Shape can transform from one Form to another.
 class Form {
 public:
     Form(std::initializer_list<bool> matrix);
     virtual ~Form() {}
 
-    inline int minX() const { return _minX; }
-    inline int minY() const { return _minY; }
-    inline int maxX() const { return _maxX; }
-    inline int maxY() const { return _maxY; }
-    inline bool exists(int x, int y) const { return _matrix[x][y]; }
+    int minX() const { return _minX; }
+    int minY() const { return _minY; }
+    int maxX() const { return _maxX; }
+    int maxY() const { return _maxY; }
+    bool exists(int x, int y) const { return _matrix[x][y]; }
 
     static const Form I0;
     static const Form I1;

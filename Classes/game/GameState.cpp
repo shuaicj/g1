@@ -1,0 +1,7 @@
+#include "GameState.h"
+
+NAMESPACE_G1_BEGIN
+
+NAMESPACE_G1_END
+
+

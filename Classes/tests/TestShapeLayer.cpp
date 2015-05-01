@@ -22,13 +22,13 @@ TestShapeLayer::TestShapeLayer() {
     }
 
     // tetrises
-    _tetrises[0] = new Tetris(Shape::I);
-    _tetrises[1] = new Tetris(Shape::O);
-    _tetrises[2] = new Tetris(Shape::J);
-    _tetrises[3] = new Tetris(Shape::L);
-    _tetrises[4] = new Tetris(Shape::S);
-    _tetrises[5] = new Tetris(Shape::Z);
-    _tetrises[6] = new Tetris(Shape::T);
+    _tetrises[0] = new Tetris(&Shape::I);
+    _tetrises[1] = new Tetris(&Shape::O);
+    _tetrises[2] = new Tetris(&Shape::J);
+    _tetrises[3] = new Tetris(&Shape::L);
+    _tetrises[4] = new Tetris(&Shape::S);
+    _tetrises[5] = new Tetris(&Shape::Z);
+    _tetrises[6] = new Tetris(&Shape::T);
 }
 
 TestShapeLayer::~TestShapeLayer() {
@@ -74,7 +74,7 @@ bool TestShapeLayer::init() {
         this->addChild(_labels[i]);
 
         // next 
-        auto next = MenuItemFont::create("Next", HANDLER(TestShapeLayer::onNext));
+        auto next = MenuItemFont::create("Next", HANDLER1(TestShapeLayer::onNext));
         next->setTag(i);
         Resolution::adapt(next, 500, 1200-i*180);
         auto nextMenu = Menu::create(next, nullptr);
@@ -86,7 +86,7 @@ bool TestShapeLayer::init() {
     }
     
     // back to HomeLayer
-    auto backButton = MenuItemFont::create("BACK", HANDLER(TestShapeLayer::onBack));
+    auto backButton = MenuItemFont::create("BACK", HANDLER1(TestShapeLayer::onBack));
     Resolution::adapt(backButton, WIDTH/2, 30);
     auto backMenu = Menu::create(backButton, nullptr);
     backMenu->setPosition(0, 0);

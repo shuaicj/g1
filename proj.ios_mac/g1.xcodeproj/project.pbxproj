@@ -22,6 +22,8 @@
 		2255A4491AEB34F4005CF1CB /* Tetris.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2255A4461AEB34F4005CF1CB /* Tetris.cpp */; };
 		2262B97E1AEC8EA50008A9A6 /* Form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2262B97C1AEC8EA50008A9A6 /* Form.cpp */; };
 		2262B9811AEC947D0008A9A6 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2262B97F1AEC947D0008A9A6 /* Board.cpp */; };
+		2277B8B61AED2B3B00C0F21B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2277B8B41AED2B3B00C0F21B /* GameState.cpp */; };
+		228BDC641AF3A872004A6D00 /* GameOverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 228BDC621AF3A872004A6D00 /* GameOverLayer.cpp */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -33,8 +35,6 @@
 		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
-		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
-		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -139,6 +139,10 @@
 		2262B97D1AEC8EA50008A9A6 /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
 		2262B97F1AEC947D0008A9A6 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		2262B9801AEC947D0008A9A6 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		2277B8B41AED2B3B00C0F21B /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
+		2277B8B51AED2B3B00C0F21B /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		228BDC621AF3A872004A6D00 /* GameOverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverLayer.cpp; sourceTree = "<group>"; };
+		228BDC631AF3A872004A6D00 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
@@ -146,8 +150,6 @@
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -286,6 +288,8 @@
 			children = (
 				2241C3F71AEBD4EE0027AAFB /* GameLayer.cpp */,
 				2241C3F81AEBD4EE0027AAFB /* GameLayer.h */,
+				228BDC621AF3A872004A6D00 /* GameOverLayer.cpp */,
+				228BDC631AF3A872004A6D00 /* GameOverLayer.h */,
 				2243714C1AE9231900D71FE7 /* HomeLayer.cpp */,
 				2243714D1AE9231900D71FE7 /* HomeLayer.h */,
 			);
@@ -310,6 +314,8 @@
 				2262B9801AEC947D0008A9A6 /* Board.h */,
 				2262B97C1AEC8EA50008A9A6 /* Form.cpp */,
 				2262B97D1AEC8EA50008A9A6 /* Form.h */,
+				2277B8B41AED2B3B00C0F21B /* GameState.cpp */,
+				2277B8B51AED2B3B00C0F21B /* GameState.h */,
 				2255A4441AEB34F4005CF1CB /* Shape.cpp */,
 				2255A4451AEB34F4005CF1CB /* Shape.h */,
 				2255A4461AEB34F4005CF1CB /* Tetris.cpp */,
@@ -376,8 +382,6 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				224371481AE9231900D71FE7 /* common */,
 				2255A4431AEB34F4005CF1CB /* game */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
 				2243714B1AE9231900D71FE7 /* layers */,
 				224B60631AEA89C90093AAE3 /* tests */,
 			);
@@ -580,12 +584,13 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				224B606C1AEA94E90093AAE3 /* TestShapeLayer.cpp in Sources */,
+				2277B8B61AED2B3B00C0F21B /* GameState.cpp in Sources */,
 				2262B9811AEC947D0008A9A6 /* Board.cpp in Sources */,
 				224B60691AEA92420093AAE3 /* Resolution.cpp in Sources */,
-				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				2243714E1AE9231900D71FE7 /* Common.cpp in Sources */,
 				2241C3F91AEBD4EE0027AAFB /* GameLayer.cpp in Sources */,
 				224371521AE929A100D71FE7 /* Helper.cpp in Sources */,
+				228BDC641AF3A872004A6D00 /* GameOverLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				2243714F1AE9231900D71FE7 /* HomeLayer.cpp in Sources */,
 				2262B97E1AEC8EA50008A9A6 /* Form.cpp in Sources */,
@@ -603,7 +608,6 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

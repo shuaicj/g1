@@ -11,6 +11,10 @@ const Shape Shape::S = { &Form::S0, &Form::S1 };
 const Shape Shape::Z = { &Form::Z0, &Form::Z1 };
 const Shape Shape::T = { &Form::T0, &Form::T1, &Form::T2, &Form::T3 };
 
+const std::vector<const Shape*> Shape::ALL = { 
+    &Shape::I, &Shape::O, &Shape::J, &Shape::L, &Shape::S, &Shape::Z, &Shape::T
+};
+
 NAMESPACE_G1_END
 
 

@@ -12,8 +12,9 @@ public:
     HomeLayer();
     virtual ~HomeLayer();
     static HomeLayer* create();
-    virtual bool init();
+    virtual bool init() override;
 
+private:
     void onStart(cc::Ref* sender);
     void onTest(cc::Ref* sender);
 

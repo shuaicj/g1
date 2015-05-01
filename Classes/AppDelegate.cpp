@@ -48,6 +48,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
+    // init srand
+    srand((unsigned int) time(0));
+
     // run
     g1::RunWithLayer(g1::HomeLayer::create());
 
