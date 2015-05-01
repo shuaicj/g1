@@ -18,6 +18,8 @@ public:
     int minY() const { return _minY; }
     int maxX() const { return _maxX; }
     int maxY() const { return _maxY; }
+    int width() const { return _maxX - _minX + 1; }
+    int height() const { return _maxY - _minY + 1; }
     bool exists(int x, int y) const { return _matrix[x][y]; }
 
     static const Form I0;

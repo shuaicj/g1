@@ -28,12 +28,25 @@ public:
     const Form* transform();
 
     // the bottom left corner of the tetris on board
-    const int boardX() const { return _x; }
-    const int boardY() const { return _y; }
+    int boardX() const { return _x; }
+    int boardY() const { return _y; }
 
     // convert to coordnate on board
-    const int boardX(int x) const { return _x + x; }
-    const int boardY(int y) const { return _y + y; }
+    int boardX(int x) const { return _x + x; }
+    int boardY(int y) const { return _y + y; }
+    int boardYForShadow() const;
+
+    // boundary
+    int minX() const;
+    int minY() const;
+    int maxX() const;
+    int maxY() const;
+    int width() const;
+    int height() const;
+    int minBoardX() const { return _x + minX(); }
+    int maxBoardX() const { return _x + maxX(); }
+    int minBoardY() const { return _y + minY(); }
+    int maxBoardY() const { return _y + maxY(); }
 
     // consider board boundary
     bool isInBoard(int x, int y) const;

@@ -25,9 +25,12 @@ private:
 
     void drawBoardGrids();
     void drawTetris();
+    void drawShadow();
     void drawNextTetris();
     cc::Node* createTetrisGrid(const Tetris* tetris);
-    void setPostionForTetris();
+    cc::Node* createShadowGrid(const Tetris* tetris);
+    void setPositionForTetris();
+    void setPositionForShadow();
 
     void showBoardLabels();
     void showLineCountLabel();
@@ -56,6 +59,7 @@ private:
     cc::Node* _fgGrids[BOARD_WIDTH][BOARD_HEIGHT]; // board fg grids
     cc::Label* _fgLabels[BOARD_WIDTH][BOARD_HEIGHT]; // board fg labels for debug
     cc::Node* _tetrisGrids[TETRIS_SIZE][TETRIS_SIZE]; // tetris on board
+    cc::Node* _shadowGrids[TETRIS_SIZE][TETRIS_SIZE]; // tetris shadow on board
     cc::Node* _nextTetrisGrids[TETRIS_SIZE][TETRIS_SIZE]; // hint of next tetris
 
     cc::Label* _lineCountLabel;

@@ -25,6 +25,7 @@ GameLayer::GameLayer() : _state(GameState::START), _board(nullptr)
     for (int x = 0; x < TETRIS_SIZE; ++x) {
         for (int y = 0; y < TETRIS_SIZE; ++y) {
             _tetrisGrids[x][y] = nullptr;
+            _shadowGrids[x][y] = nullptr;
             _nextTetrisGrids[x][y] = nullptr;
         }
     }
@@ -115,6 +116,7 @@ void GameLayer::update(float dt) {
         _nextTetris = new Tetris(_board);
         showBoardLabels();
         drawTetris();
+        drawShadow();
         drawNextTetris();
 
         // start to fall
@@ -159,7 +161,24 @@ void GameLayer::drawTetris() {
             }
         }
     }
-    setPostionForTetris();
+    setPositionForTetris();
+}
+
+void GameLayer::drawShadow() {
+    for (int x = 0; x < TETRIS_SIZE; ++x) {
+        for (int y = 0; y < TETRIS_SIZE; ++y) {
+            if (_shadowGrids[x][y]) {
+                _shadowGrids[x][y]->removeFromParent();
+                _shadowGrids[x][y] = nullptr;
+            }
+            if (_tetris->exists(x, y)) {
+                _shadowGrids[x][y] = createShadowGrid(_tetris);
+                Resolution::adapt(_shadowGrids[x][y]);
+                this->addChild(_shadowGrids[x][y]);
+            }
+        }
+    }
+    setPositionForShadow();
 }
 
 void GameLayer::drawNextTetris() {
@@ -203,36 +222,72 @@ Node* GameLayer::createTetrisGrid(const Tetris* tetris) {
     return rt;
 }
 
-void GameLayer::setPostionForTetris() {
+Node* GameLayer::createShadowGrid(const Tetris* tetris) {
+    Node* rt = nullptr;
+    auto shape = tetris->shape();
+    if (shape == &Shape::I) {
+        rt = LayerColor::create(Color4B(200, 0, 0, 80), 35, 35);
+    } else if (shape == &Shape::O) {
+        rt = LayerColor::create(Color4B(0, 200, 0, 80), 35, 35);
+    } else if (shape == &Shape::J) {
+        rt = LayerColor::create(Color4B(0, 0, 200, 80), 35, 35);
+    } else if (shape == &Shape::L) {
+        rt = LayerColor::create(Color4B(200, 200, 0, 80), 35, 35);
+    } else if (shape == &Shape::S) {
+        rt = LayerColor::create(Color4B(200, 0, 200, 80), 35, 35);
+    } else if (shape == &Shape::Z) {
+        rt = LayerColor::create(Color4B(0, 200, 200, 80), 35, 35);
+    } else if (shape == &Shape::T) {
+        rt = LayerColor::create(Color4B(200, 200, 200, 80), 35, 35);
+    }
+
+    assert(rt);
+    rt->ignoreAnchorPointForPosition(false);
+
+    return rt;
+}
+
+void GameLayer::setPositionForTetris() {
     for (int x = 0; x < TETRIS_SIZE; ++x) {
         for (int y = 0; y < TETRIS_SIZE; ++y) {
             if (_tetrisGrids[x][y]) {
                 int boardX = _tetris->boardX(x);
                 int boardY = _tetris->boardY(y);
                 _tetrisGrids[x][y]->setPosition(getPositionForBoardGrid(boardX, boardY));
-                //_tetrisGrids[x][y]->setVisible(_tetris->isInBoard(x, y));
+                _tetrisGrids[x][y]->setVisible(_tetris->isInBoard(x, y));
+            }
+        }
+    }
+}
+
+void GameLayer::setPositionForShadow() {
+    int boardX = _tetris->boardX();
+    int boardY = _tetris->boardYForShadow();
+    bool visible = boardY < _tetris->minBoardY() - _tetris->height() - 2;
+    for (int x = 0; x < TETRIS_SIZE; ++x) {
+        for (int y = 0; y < TETRIS_SIZE; ++y) {
+            if (_shadowGrids[x][y]) {
+                int sBoardX = boardX + x;
+                int sBoardY = boardY + y;
+                _shadowGrids[x][y]->setPosition(getPositionForBoardGrid(sBoardX, sBoardY));
+                _shadowGrids[x][y]->setVisible(visible);
             }
         }
     }
 }
 
 void GameLayer::showBoardLabels() {
-    for (int boardX = 0; boardX < BOARD_WIDTH; ++boardX) {
-        for (int boardY = 0; boardY < BOARD_HEIGHT; ++boardY) {
-            if (!_fgLabels[boardX][boardY]) {
-                _fgLabels[boardX][boardY] = Label::createWithSystemFont("", "", 24);
-                _fgLabels[boardX][boardY]->setPosition(getPositionForBoardGrid(boardX, boardY));
-                Resolution::adapt(_fgLabels[boardX][boardY]);
-                this->addChild(_fgLabels[boardX][boardY], 1);
-            }
-            _fgLabels[boardX][boardY]->setString(_board->exists(boardX, boardY) ? "1" : "0");
-            if (_board->exists(boardX, boardY)) {
-                assert(_fgGrids[boardX][boardY]);
-            } else {
-                assert(!_fgGrids[boardX][boardY]);
-            }
-        }
-    }
+    //for (int boardX = 0; boardX < BOARD_WIDTH; ++boardX) {
+    //    for (int boardY = 0; boardY < BOARD_HEIGHT; ++boardY) {
+    //        if (!_fgLabels[boardX][boardY]) {
+    //            _fgLabels[boardX][boardY] = Label::createWithSystemFont("", "", 24);
+    //            _fgLabels[boardX][boardY]->setPosition(getPositionForBoardGrid(boardX, boardY));
+    //            Resolution::adapt(_fgLabels[boardX][boardY]);
+    //            this->addChild(_fgLabels[boardX][boardY], 1);
+    //        }
+    //        _fgLabels[boardX][boardY]->setString(_board->exists(boardX, boardY) ? "1" : "0");
+    //    }
+    //}
 }
 
 void GameLayer::showLineCountLabel() {
@@ -264,7 +319,8 @@ void GameLayer::showScoreLabel() {
 void GameLayer::moveDown(int step) {
     int realStep = _tetris->moveDown(step);
     if (realStep > 0) {
-        setPostionForTetris();
+        setPositionForTetris();
+        setPositionForShadow();
     }
     if (realStep < step) {
         for (int x = 0; x < TETRIS_SIZE; ++x) {
@@ -295,7 +351,8 @@ void GameLayer::moveDown(int step) {
         }
         // make next tetris become the current tetris, and create new next tetris
         _tetris = _nextTetris;
-        setPostionForTetris();
+        setPositionForTetris();
+        drawShadow();
         _nextTetris = new Tetris(_board);
         drawNextTetris();
         // check score
@@ -316,6 +373,14 @@ void GameLayer::moveDown(int step) {
             showLineCountLabel();
             _score += getScore(line);
             showScoreLabel();
+            // hide shadow
+            for (int x = 0; x < TETRIS_SIZE; ++x) {
+                for (int y = 0; y < TETRIS_SIZE; ++y) {
+                    if (_shadowGrids[x][y]) {
+                        _shadowGrids[x][y]->setVisible(false);
+                    }
+                }
+            }
             // fade out the completed line
             for (int boardY : _scoreLines) {
                 for (int boardX = 0; boardX < BOARD_WIDTH; ++boardX) {
@@ -339,14 +404,16 @@ void GameLayer::moveDown(int step) {
 void GameLayer::moveLeft(int step) {
     int realStep = _tetris->moveLeft(step);
     if (realStep > 0) {
-        setPostionForTetris();
+        setPositionForTetris();
+        setPositionForShadow();
     }
 }
 
 void GameLayer::moveRight(int step) {
     int realStep = _tetris->moveRight(step);
     if (realStep > 0) {
-        setPostionForTetris();
+        setPositionForTetris();
+        setPositionForShadow();
     }
 }
 
@@ -354,6 +421,7 @@ void GameLayer::rotate() {
     auto form = _tetris->transform();
     if (form) {
         drawTetris();
+        drawShadow();
     }
 }
 
@@ -383,6 +451,7 @@ void GameLayer::clearScoreLines() {
             }
         }
     }
+    setPositionForShadow();
     _scoreLines.clear();
     _state = GameState::FALL;
 }

@@ -39,13 +39,70 @@ const Form* Tetris::transform() {
     }
     if (!conflicts(temp)) {
         auto form = _shape->forms()[temp];
-        if (boardX(form->minX()) >= 0 && boardX(form->maxX()) < BOARD_WIDTH
-                && boardY(form->minY()) >= 0) {
+        if (boardX(form->minX()) >= 0 && boardX(form->maxX()) < BOARD_WIDTH) {
             _index = temp;
             return form;
         }
+        // when transforming at the left side of the board
+        if (boardX(form->minX()) < 0) {
+            int offset = - boardX(form->minX());
+            if (!conflicts(temp, _x+offset, _y)) {
+                _x += offset;
+                _index = temp;
+                return form;
+            }
+        }
+        // when transforming at the right side of the board
+        if (boardX(form->maxX()) >= BOARD_WIDTH) {
+            int offset = boardX(form->maxX()) - (BOARD_WIDTH - 1);
+            if (!conflicts(temp, _x-offset, _y)) {
+                _x -= offset;
+                _index = temp;
+                return form;
+            }
+        }
     }
     return nullptr;
+}
+
+int Tetris::boardYForShadow() const {
+    assert(_board);
+    int rt = BOARD_HEIGHT;
+    int minBoardY = - form()->minY();
+    for (int boardY = BOARD_HEIGHT; boardY >= minBoardY; --boardY) {
+        if (conflicts(_index, _x, boardY)) {
+            return rt;
+        } else {
+            rt = boardY;
+        }
+    }
+
+    // impossible to be here
+    return 0;
+}
+
+int Tetris::minX() const { 
+    return form()->minX(); 
+}
+
+int Tetris::minY() const { 
+    return form()->minY(); 
+}
+
+int Tetris::maxX() const { 
+    return form()->maxX(); 
+}
+
+int Tetris::maxY() const {
+    return form()->maxY(); 
+}
+
+int Tetris::width() const {
+    return form()->width();
+}
+
+int Tetris::height() const { 
+    return form()->height();
 }
 
 bool Tetris::isInBoard(int x, int y) const {
