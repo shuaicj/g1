@@ -1,2 +1,1 @@
-# g1
-My little game 1.
+# A Tetris game based on the cocos2d-x engine.
